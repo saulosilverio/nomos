@@ -1,0 +1,41 @@
+header {
+    &.main {
+        background-color: rgba($secondary, 0.5);
+        backdrop-filter: blur(16px);
+        font-family: $font-family-secondary;
+        position: fixed;
+        z-index: $zindex-fixed;
+        width: 100%;
+
+        > div {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 200px 1fr 180px; 
+            grid-template-rows: 72px; 
+            gap: 0 15px; 
+            grid-template-areas: "logo menu account"; 
+        }
+    }
+    .logo { 
+        grid-area: logo; 
+        
+        svg {
+            width: 100%;
+            max-width: 120px;
+            height: auto;
+
+            path {
+                fill: $primary;
+            }
+        }
+    }
+    .main-menu { grid-area: menu; }
+    .account { grid-area: account; }
+}
+
+.page-header {
+    background-color: $primary;
+    border-radius: 0 $border-radius-pill $border-radius-pill 0;
+    height: 588px;
+    width: 100%;
+}

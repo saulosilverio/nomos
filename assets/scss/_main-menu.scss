@@ -1,0 +1,14 @@
+.main-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    > a {
+        color: $white;
+    }
+
+    .ddw-menu {
+        color: $white;
+        position: relative;
+    }
+}
