@@ -1,1 +1,19 @@
+$font-family-base:      'Roboto', sans-serif;
 $font-family-secondary: 'Sora', sans-serif;
+
+$white:             #fdfdfd;
+$light:             #F4ECE6;
+$dark:              #011F18;
+$primary:           #C8E05B;
+$secondary:         #011F18;
+
+$body-bg: $dark;
+
+$border-radius: 22px;
+
+// z-index
+$zindex-dropdown:                   1000 !default;
+$zindex-sticky:                     1020 !default;
+$zindex-fixed:                      1030 !default;
+$zindex-offcanvas-backdrop:         1040 !default;
+$zindex-offcanvas:                  1045 !default;
