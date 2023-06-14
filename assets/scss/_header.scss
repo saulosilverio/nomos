@@ -14,10 +14,19 @@ header {
             grid-template-rows: 72px; 
             gap: 0 15px; 
             grid-template-areas: "logo menu account"; 
+
+            @include media-breakpoint-down(sm) {
+                grid-template-rows: 48px; 
+                grid-template-columns: 48px 1fr 48px;
+                grid-template-areas: "menu-mobile logo account";
+            }
         }
     }
     .logo { 
         grid-area: logo; 
+        display: flex;
+        align-items: center;
+        margin: 0;
         
         svg {
             width: 100%;
@@ -26,6 +35,14 @@ header {
 
             path {
                 fill: $primary;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            justify-content: center;
+
+            svg {
+                max-width: 100px;
             }
         }
     }
