@@ -2,6 +2,7 @@ header {
     &.main {
         background-color: rgba($secondary, 0.5);
         backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
         font-family: $font-family-secondary;
         position: fixed;
         z-index: $zindex-fixed;
@@ -19,6 +20,7 @@ header {
                 grid-template-rows: 48px; 
                 grid-template-columns: 48px 1fr 48px;
                 grid-template-areas: "menu-mobile logo account";
+                padding: 0;
             }
         }
     }
@@ -47,7 +49,26 @@ header {
         }
     }
     .main-menu { grid-area: menu; }
-    .account { grid-area: account; }
+    .account { 
+        grid-area: account;
+
+        @include media-breakpoint-down(sm) {
+            .btn {
+                background: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                height: 48px;
+                width: 48px;
+                color: $primary;
+                
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
 }
 
 .page-header {

@@ -1,0 +1,1 @@
+const menuBtn=document.getElementById("menuMobile"),mainMenu=document.getElementById("mainMenu"),closeMenu=document.getElementById("closeMenu");menuBtn.addEventListener("click",(()=>{mainMenu.classList.add("opn-menu")})),closeMenu.addEventListener("click",(()=>{mainMenu.classList.remove("opn-menu")}));
