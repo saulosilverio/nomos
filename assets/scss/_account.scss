@@ -1,0 +1,69 @@
+.ac-center {
+    position: relative;
+    
+    @include media-breakpoint-down(sm) {
+        .avatar {
+            height: 32px;
+            width: 32px;
+        }
+    }
+}
+.ac-ddw {
+    background: $dark-bg;
+    border: $dark-border-color;
+    border-radius: $border-radius-lg;
+    box-shadow: 0px 5px 12px 2px rgba($dark, .8);
+    height: fit-content;
+    max-height: 570px;
+    width: 320px;
+    position: absolute;
+    top: 100%;
+    right: -50px;
+    display: none;
+
+    @include media-breakpoint-down(sm) {
+        right: 0;
+    }
+
+    &.opn-ddw {
+        display: block;
+    }
+
+    .ac-hd {
+        border-bottom: 1px solid $dark-border-color;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin: 0 2.4rem;
+        padding: 2.4rem 0;
+
+        h6 {
+            color: $accent;
+            font-size: 1.8rem;
+            margin: 0;
+        }
+        p {
+            color: $light;
+            font-size: 1.4rem;
+            margin: 0;
+        }
+    }
+    .ac-bd {
+        color: $light;
+        padding: 2.4rem;
+
+        a {
+            color: $accent;
+            display: flex;
+            gap: .8rem;
+            padding: 1.2rem 0;
+        }
+    }
+    .divider {
+        background-color: $dark-border-color;
+        height: 1px;
+        margin: 1.5rem 0;
+        width: 100%;
+    }
+}

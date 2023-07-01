@@ -1,0 +1,18 @@
+.donut-chart {
+    width: 64px;
+    height: 64px;    
+
+    .donut {
+        width: 100%;
+        height: auto;
+    }
+
+    .donut-ring {
+        stroke: $primary;
+    }
+    
+    .donut-segment {
+        transform-origin: center;
+        stroke: $accent;
+    }
+}

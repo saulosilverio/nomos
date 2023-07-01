@@ -1,7 +1,7 @@
 
 .main-menu {
     @include media-breakpoint-down(sm) {
-        background: $secondary;
+        background: $primary;
         box-shadow: 
             0 0 0 100vw rgba($dark, .6),
             0 3px 30px 0 rgba($dark, .3);
@@ -30,7 +30,7 @@
         }
 
         a {
-            border-bottom: 1px solid rgba($primary, .1);
+            border-bottom: 1px solid rgba($accent, .1);
             display: block;
             padding: 15px 0;
         }
@@ -54,7 +54,7 @@
         .close-menu {
             background: none;
             border: none;
-            color: $primary;
+            color: $accent;
             font-size: 1.6rem;
             display: flex;
             align-items: center;
@@ -75,7 +75,7 @@
         gap: 30px;
         
         > a {
-            color: $primary;
+            color: $accent;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -86,7 +86,7 @@
             position: relative;
 
             > a {
-                color: $primary;
+                color: $accent;
                 display: flex;
                 align-items: center;
                 gap: 8px;
@@ -94,7 +94,7 @@
                 
                 &::after {
                     content: "";
-                    background-image: inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 7"><path d="M.565.727A.39.39 0 0 1 .893.562c.082 0 .191.028.273.11l5.384 4.95 5.417-4.95a.407.407 0 0 1 .602.027.407.407 0 0 1-.028.602L6.85 6.55a.396.396 0 0 1-.575 0L.592 1.3C.4 1.164.4.89.565.727Z" fill="#{$primary}"/></svg>');
+                    background-image: inline-svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 7"><path d="M.565.727A.39.39 0 0 1 .893.562c.082 0 .191.028.273.11l5.384 4.95 5.417-4.95a.407.407 0 0 1 .602.027.407.407 0 0 1-.028.602L6.85 6.55a.396.396 0 0 1-.575 0L.592 1.3C.4 1.164.4.89.565.727Z" fill="#{$accent}"/></svg>');
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: 14px auto;
@@ -105,10 +105,10 @@
 
             .ddw {
                 background-color: $dark;
-                border: 1px solid rgba($primary, .1);
+                border: 1px solid rgba($accent, .1);
                 box-shadow: 0px 5px 12px 2px #040710;
                 border-radius: $border-radius;
-                color: $primary;
+                color: $accent;
                 position: absolute;
                 top: calc(100% + 10px);
                 left: 0;
@@ -126,7 +126,7 @@
                     li {
                         
                         a {
-                            color: $primary;
+                            color: $accent;
                             display: block;
                             padding: 15px 0;
                         }
@@ -152,7 +152,7 @@
 .menu-mobile { 
     background: none;
     border: none;
-    color: $primary;
+    color: $accent;
     padding: 0;
 
     grid-area: menu-mobile; 

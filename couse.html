@@ -45,24 +45,248 @@
                 </button>
             </nav>
             <div class="account">
-                <a href="#" class="btn btn-primary">
+                <!-- <a href="#" class="btn btn-primary">
                     <svg class="icon">
                         <use xlink:href="../assets/img/icons-solid.svg#arrow-right-to-bracket"></use>
                     </svg>
                     <span>Acessar conta</span>
-                </a>
+                </a> -->
+                <div>
+                    <div class="nf-center">
+                        <button class="btn btn-secondary notified" onclick="dropDown('nfList')">
+                            <svg class="icon">
+                                <title>Fechar</title>
+                                <use xlink:href="../assets/img/icons-regular.svg#bell"></use>
+                            </svg>
+                        </button>
+                        <div id="nfList" class="nf-ddw">
+                            <div class="nf-hd">
+                                <h6>Notificações <small>99</small></h6>
+                                <button type="button">Marcar como lidas</button>
+                            </div>
+                            <div class="nf-bd">
+                                <ul>
+                                    <li class="active">
+                                        <div class="nf-item">
+                                            <div class="avatar md">
+                                                <img src="https://i.pravatar.cc/56" alt="Foto de avatar do usuário"/>
+                                            </div>
+                                            <div>
+                                                <p>A comprehensive guide to an unfortunate experience</p>
+                                                <div class="nf-data">
+                                                    <div>
+                                                        <svg class="icon">
+                                                            <title>Relógio</title>
+                                                            <use xlink:href="../assets/img/icons-regular.svg#clock"></use>
+                                                        </svg>
+                                                        2h atrás
+                                                    </div>
+                                                    <div>
+                                                        <svg class="icon">
+                                                            <title>Conteúdo</title>
+                                                            <use xlink:href="../assets/img/icons-regular.svg#file-lines"></use>
+                                                        </svg>
+                                                        conteúdo novo
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="nf-item">
+                                            <div class="avatar md">
+                                                <img src="https://i.pravatar.cc/56" alt="Foto de avatar do usuário"/>
+                                            </div>
+                                            <div>
+                                                <p>A comprehensive guide to an unfortunate experience</p>
+                                                <div class="nf-data">
+                                                    <div>
+                                                        <svg class="icon">
+                                                            <title>Relógio</title>
+                                                            <use xlink:href="../assets/img/icons-regular.svg#clock"></use>
+                                                        </svg>
+                                                        2h atrás
+                                                    </div>
+                                                    <div>
+                                                        <svg class="icon">
+                                                            <title>Conteúdo</title>
+                                                            <use xlink:href="../assets/img/icons-regular.svg#file-lines"></use>
+                                                        </svg>
+                                                        conteúdo novo
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="nf-item">
+                                            <div class="badge sm">
+                                                <img src="/assets/img/badge-advanced-sm.png" alt="Foto de avatar do usuário"/>
+                                            </div>
+                                            <div>
+                                                <p>We've updated our topics hierarchy to better organize products 🎉</p>
+                                                <div class="nf-data">
+                                                    <div>
+                                                        <svg class="icon">
+                                                            <title>Relógio</title>
+                                                            <use xlink:href="../assets/img/icons-regular.svg#clock"></use>
+                                                        </svg>
+                                                        2h atrás
+                                                    </div>
+                                                    <div>
+                                                        <svg class="icon">
+                                                            <title>Conteúdo</title>
+                                                            <use xlink:href="../assets/img/icons-regular.svg#file-lines"></use>
+                                                        </svg>
+                                                        conteúdo novo
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-secondary btn-sm mt-2">Resgatar prêmio</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="ac-center">
+                        <button class="avatar md" onclick="dropDown('acList')">
+                            <img src="https://i.pravatar.cc/56" alt="Foto de avatar do usuário"/>
+                        </button>
+                        <div id="acList" class="ac-ddw">
+                            <div class="ac-hd">
+                                <div class="avatar lg">
+                                    <img src="https://i.pravatar.cc/56" alt="Foto de avatar do usuário"/>
+                                </div>
+                                <div>
+                                    <h6>João Souza</h6>
+                                    <p>joao.souza@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="ac-bd">
+                                <a href="#">
+                                    <svg class="icon">
+                                        <title>Usuário</title>
+                                        <use xlink:href="../assets/img/icons-regular.svg#user"></use>
+                                    </svg>
+                                    Meus dados
+                                </a>
+                                <a href="#">
+                                    <svg class="icon">
+                                        <title>Conquitas</title>
+                                        <use xlink:href="../assets/img/icons-solid.svg#award"></use>
+                                    </svg>
+                                    Minhas conquistas
+                                </a>
+                                <div class="divider"></div>
+                                <a href="#">
+                                    <svg class="icon">
+                                        <title>Sair</title>
+                                        <use xlink:href="../assets/img/icons-solid.svg#arrow-right-from-bracket"></use>
+                                    </svg>
+                                    Desconectar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
     <main>
         <header class="page-header">
-            <div class="ph-info">
-                <div class="ph-img"></div>
-                <div class="ph-txt">
-
+            <div class="container">
+                <div class="ph-info">
+                    <div class="ph-img img-cover">
+                        <img src="../assets/img/course-cover.png"/>
+                    </div>
+                    <div class="ph-txt">
+                        <h2>Meu Primeiro<br/> Lucro</h2>
+                        <p>Well, I think now is the perfect time to plunge into self-development. Books are one of the greatest options out there when it comes to your personal growth and self-improvement.</p>
+                        <div class="ph-course-tutor">
+                            <div class="avatar md">
+                                <img src="https://i.pravatar.cc/56" alt="Foto de avatar do usuário"/>
+                            </div>
+                            <p>Leonardo Werneck, Professor e Trader profissional</p>
+                        </div>
+                    </div>
+                    <div class="ph-masked-img">
+                        <img src="https://source.unsplash.com/8QA3xEsKD0s/1600x900"/>
+                    </div>
                 </div>
             </div>
         </header>
+        <div class="container">
+            <div class="course-info">
+                <div class="achievement">
+                    <div></div>
+                    <div>
+                        <span>Conquista</span>
+                        <p><strong>Investidor qualificado</strong></p>
+                        <button class="btn btn-secondary btn-sm">Resgatar prêmio</button>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="progress">
+                    <div class="donut-chart">
+                        <svg width="100%" height="100%" viewBox="0 0 40 40" class="donut">
+                          <circle class="donut-hole" cx="20" cy="20" r="15.91549430918954" fill="transparent"></circle>
+                          <circle class="donut-ring" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5"></circle>
+                          <circle class="donut-segment donut-segment-4" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5" stroke-dasharray="30 70" stroke-dashoffset="25"></circle>
+                        </svg>
+                      </div>
+                      <div>
+                        <span>Concluído</span>
+                        <p><strong>30%</strong></p>
+                      </div>
+                </div>
+                <div class="divider"></div>
+                <div class="content">
+                    <div>
+                        <div class="">
+                            <svg class="icon">
+                                <title>Conteúdo</title>
+                                <use xlink:href="../assets/img/icons-solid.svg#file"></use>
+                            </svg>
+                        </div>
+                        <div>
+                            <span>Conteúdo</span>
+                            <p><strong>3</strong>/10</p>
+                        </div>
+                    </div>
+                    <div class="cse-actions">
+                        <button class="btn btn-secondary">
+                            <svg class="icon">
+                                <title>Turn right</title>
+                                <use xlink:href="../assets/img/icons-solid.svg#arrow-rotate-right"></use>
+                            </svg>
+                        </button>
+                        <button class="btn btn-secondary">
+                            <svg class="icon">
+                                <title>Star</title>
+                                <use xlink:href="../assets/img/icons-regular.svg#star"></use>
+                            </svg>
+                        </button>
+                        <button class="btn btn-secondary">
+                            <svg class="icon">
+                                <title>WhatsApp</title>
+                                <use xlink:href="../assets/img/icons-brands.svg#whatsapp"></use>
+                            </svg>
+                            Dúvidas
+                        </button>
+                        <button class="btn btn-primary">
+                            <svg class="icon">
+                                <title>Download</title>
+                                <use xlink:href="../assets/img/icons-regular.svg#circle-down"></use>
+                            </svg>
+                            Download
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>

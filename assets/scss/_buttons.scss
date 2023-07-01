@@ -2,20 +2,47 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
     border-radius: 50rem;
     gap: 8px;
-    padding: 15px;
+    padding: 1.6rem;
     text-align: center;
     transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 
     &.btn-primary {
-        background-color: $primary;
-        color: $secondary;
+        background-color: $accent;
+        color: $primary;
 
         &:hover {
-            background-color: lighten(saturate($primary, 5.13), 20.59)
-            ;
+            background-color: lighten(saturate($accent, 5.13), 20.59);
         }
+        &:disabled {
+            background-color: lighten(desaturate(adjust-hue($accent, -6), 56.02), 23.92);
+        }
+        &:active {
+            color: $light;
+            background-color: darken(desaturate(adjust-hue($accent, -3), 6.60), 26.08);
+        }
+    }
+    &.btn-secondary {
+        border-radius: 48px;
+        background-color: rgba($accent, .10);
+        backdrop-filter: blur(16px);
+        color: $accent;
+
+        &:hover {
+            background-color: rgba($accent, .30);
+        }
+        &:disabled {
+
+        }
+        &:active {
+
+        }
+    }
+    &.btn-sm {
+        font-size: 1.2rem;
+        padding: 5px 8px;
     }
     &.btn-lg {
         padding: 20px;

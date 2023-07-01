@@ -7,7 +7,7 @@
       "uuidString" : "75D60EEB-4F32-4421-818E-617CBAF90CF7"
     }
   ],
-  "creatorBuild" : "34484",
+  "creatorBuild" : "34510",
   "files" : {
     "\/assets\/css\/main.css" : {
       "aP" : 1,
@@ -29,6 +29,19 @@
       "oAP" : "\/assets\/css\/main.css.map",
       "oF" : 0
     },
+    "\/assets\/img\/badge-advanced-sm.png" : {
+      "ft" : 32768,
+      "iS" : 3261,
+      "oA" : 0,
+      "oAP" : "\/assets\/img\/badge-advanced-sm.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
     "\/assets\/img\/course-cover.png" : {
       "ft" : 32768,
       "iS" : 86784,
@@ -41,6 +54,16 @@
       "ou" : "lpckwebp-none",
       "q" : 90,
       "rq" : 75
+    },
+    "\/assets\/img\/hd-mask.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/img\/hd-mask.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
     },
     "\/assets\/img\/icons-brands.svg" : {
       "ft" : 2097152,
@@ -72,6 +95,17 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/assets\/js\/ui-interactions-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/ui-interactions-min-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/assets\/js\/ui-interactions.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -82,6 +116,21 @@
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
+    },
+    "\/assets\/scss\/_account.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/_account.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
     },
     "\/assets\/scss\/_breakpoints.scss" : {
       "aP" : 0,
@@ -108,6 +157,36 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/scss\/_buttons.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/assets\/scss\/_course-info.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/_course-info.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/assets\/scss\/_donut-chart.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/_donut-chart.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
@@ -198,6 +277,36 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/scss\/_mixins.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/assets\/scss\/_notification.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/_notification.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/assets\/scss\/_page-header.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/_page-header.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,

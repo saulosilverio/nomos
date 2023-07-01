@@ -1,0 +1,46 @@
+.course-info {
+    background-color: rgba($primary, .60);
+    backdrop-filter: blur(16px);
+    border-radius: 6.5rem;
+    color: $light;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -65px;
+    gap: 15px;
+    padding: 3.0rem;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+
+    .divider {
+        background: $dark-border-color;
+        height: auto;
+        width: 1px;
+        flex-shrink: 0;
+    }
+
+    p {
+        margin: 0 0 .8rem 0;
+    }
+    strong {
+        color: $accent;
+    }
+
+    .progress {
+        display: flex;
+        align-items: center;
+        gap: .8rem;
+    }
+    .content {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        justify-content: space-between;
+    }
+    .cse-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}

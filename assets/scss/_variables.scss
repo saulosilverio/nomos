@@ -5,12 +5,15 @@ $white:             #fdfdfd;
 $black:             #111;
 $light:             #F4ECE6;
 $dark:              #011F18;
-$primary:           #C8E05B;
-$secondary:         #011F18;
+$accent:            #C8E05B;
+$primary:           #011310;
+$secondary:         #F4ECE6;
+$tertiary:          #9C9D8D;
 
 $body-bg: $dark;
 
 $border-radius: 22px;
+$border-radius-lg: 32px;
 
 // z-index
 $zindex-dropdown:                   1000 !default;
@@ -18,3 +21,13 @@ $zindex-sticky:                     1020 !default;
 $zindex-fixed:                      1030 !default;
 $zindex-offcanvas-backdrop:         1040 !default;
 $zindex-offcanvas:                  1045 !default;
+
+// Backgrounds
+$dark-bg: lighten(desaturate($primary, 4.81), 1.37);
+
+// Border
+$dark-border-color: rgba($accent, .10);
+
+// Transitions
+$ease-in: cubic-bezier(0.64, 0, 0.78, 0);
+$ease-out: cubic-bezier(0.64, 0, 0.78, 0);
