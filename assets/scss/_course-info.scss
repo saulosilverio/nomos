@@ -1,22 +1,36 @@
 .course-info {
     background-color: rgba($primary, .60);
     backdrop-filter: blur(16px);
-    border-radius: 6.5rem;
+    border-radius: 1rem;
     color: $light;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: -65px;
-    gap: 15px;
-    padding: 3.0rem;
+    margin-top: -2rem;
+    gap: 1.5rem;
+    padding: 1.5rem;
     width: 100%;
     position: relative;
     z-index: 1;
+
+    @include media-breakpoint-up(lg) {
+        position: sticky;
+        border-radius: 6.5rem;
+        margin-top: -65px;
+        padding: 3rem;
+        top: calc(75px + .5rem);
+    }
 
     .divider {
         background: $dark-border-color;
         height: auto;
         width: 1px;
         flex-shrink: 0;
+
+        @include media-breakpoint-down(sm) {
+            height: 1px;
+            width: 100%;
+        }
     }
 
     p {
@@ -26,21 +40,34 @@
         color: $accent;
     }
 
+    .achievement {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        flex-grow: 1;
+    }
+
     .progress {
         display: flex;
         align-items: center;
-        gap: .8rem;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        flex-grow: 1;
     }
-    .content {
+    .ctt-progress {
         display: flex;
         align-items: center;
-        gap: 15px;
-        justify-content: space-between;
+        gap: 1.5rem;
+        flex-grow: 1;
+
+        .icon {
+            color: $accent;
+        }
     }
     .cse-actions {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: .8rem;
         flex-wrap: wrap;
     }
 }

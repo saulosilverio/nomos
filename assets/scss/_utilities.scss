@@ -1,0 +1,23 @@
+.d-none {
+    &-sm {
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+    &-md {
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+    }
+    &-lg {
+        @include media-breakpoint-down(lg) {
+        
+            display: none;
+        }
+    }
+    &-xl {
+        @include media-breakpoint-down(xl) {
+            display: none;
+        }
+    }
+}

@@ -1,6 +1,8 @@
 .donut-chart {
-    width: 64px;
-    height: 64px;    
+    max-width: 64px;
+    max-height: 64px; 
+    width: 100%; 
+    height: auto; 
 
     .donut {
         width: 100%;
