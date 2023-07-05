@@ -21,3 +21,14 @@
         }
     }
 }
+
+// Badge
+.badge {
+    display: flex;
+    gap: .8rem;
+    font-size: 1.4rem;
+    border-radius: 50rem;
+    padding: 6px 12px;
+    background-color: rgba($light, .1);
+    width: fit-content;
+}

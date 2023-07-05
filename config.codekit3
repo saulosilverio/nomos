@@ -42,6 +42,19 @@
       "q" : 90,
       "rq" : 75
     },
+    "\/assets\/img\/bg-explore.png" : {
+      "ft" : 32768,
+      "iS" : 731131,
+      "oA" : 0,
+      "oAP" : "\/assets\/img\/bg-explore.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
     "\/assets\/img\/course-cover.png" : {
       "ft" : 32768,
       "iS" : 86784,
@@ -192,6 +205,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/assets\/scss\/_footer.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/_footer.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/assets\/scss\/_functions.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -337,6 +365,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/scss\/_reset.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/assets\/scss\/_type.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/scss\/_type.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,

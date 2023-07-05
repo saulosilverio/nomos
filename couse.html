@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body>
@@ -236,12 +237,12 @@
                         <svg width="100%" height="100%" viewBox="0 0 40 40" class="donut">
                           <circle class="donut-hole" cx="20" cy="20" r="15.91549430918954" fill="transparent"></circle>
                           <circle class="donut-ring" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5"></circle>
-                          <circle class="donut-segment donut-segment-4" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5" stroke-dasharray="30 70" stroke-dashoffset="25"></circle>
+                          <circle id="donutSegment" class="donut-segment" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5" stroke-dasharray="0 0" stroke-dashoffset="25"></circle>
                         </svg>
                       </div>
                       <div>
                         <span>Concluído</span>
-                        <p><strong>30%</strong></p>
+                        <p><strong id="courseProgress" data-course-progress="30"></strong></p>
                       </div>
                 </div>
                 <div class="divider d-none-md"></div>
@@ -287,73 +288,823 @@
                 </div>
             </div>
 
-            <div>
-                <p>
-                Cubilia gravida a dictum vulputate class nam himenaeos justo! Lectus suscipit per phasellus aenean blandit ante duis est donec sociosqu elit sem! Aptent magnis eros auctor cras a curabitur non sem. Sagittis commodo tellus luctus litora sapien senectus risus mus interdum parturient? Accumsan; velit id quam sagittis maecenas. Nunc dapibus donec dolor hendrerit malesuada aptent quisque porta ante. Augue sagittis curabitur lobortis habitasse neque eu at et bibendum in dui. Mollis netus himenaeos sociis sed. Vivamus nisl ridiculus est varius proin. Aliquet est arcu pulvinar a nibh adipiscing quis gravida congue. Fames quis sociis mattis pretium leo malesuada faucibus. Lobortis habitant curabitur ornare gravida felis mollis primis facilisi suscipit sociis lacinia! Sit dictum purus.
-                </p>
-                <p>
-                Et class vivamus dolor urna torquent cubilia tempus. Rutrum facilisi ipsum consequat vehicula vitae nibh vehicula, lacus dolor fusce id. Integer rutrum donec quisque facilisi ridiculus donec suscipit tempus est conubia? Etiam mattis pellentesque in faucibus. Non vulputate viverra mi ullamcorper risus mollis dignissim diam porttitor a mollis nunc! Semper mi lorem accumsan sociis nam odio ridiculus velit fermentum dis nec. Magnis nibh taciti eros facilisis placerat aliquam pretium turpis felis auctor in accumsan. Ut justo ad sem tristique viverra vestibulum tristique vitae parturient sit lacinia. Torquent ornare quam fusce condimentum suspendisse nec. Porta conubia imperdiet parturient. Dui tristique eu ligula, mattis et posuere vestibulum ornare cubilia sed! Auctor hac sed tellus tempus class fusce eget? Congue purus cubilia auctor vulputate cras facilisi sodales netus nunc.
-                </p>
-                <p>
-                Facilisi lacus platea aliquet ridiculus inceptos eleifend. Natoque velit ultricies porta nec suscipit purus luctus tristique. Sociosqu malesuada porttitor quis, tristique ornare ornare. Nulla hac pellentesque curabitur lacinia adipiscing congue ipsum nunc habitant. Elementum facilisi tristique habitant eu? Ligula orci morbi penatibus id mattis placerat leo. Condimentum magna convallis vehicula tempus potenti nisi taciti et curabitur mollis quis dignissim. Nam purus ullamcorper lectus nunc molestie tincidunt odio volutpat. Interdum risus, est fames. Vulputate proin fames elementum at netus dui.
-                </p>
-                <p>
-                Vehicula dictumst eu sociis dignissim, eget tempor maecenas. Diam ut morbi molestie sollicitudin netus eget cursus ultricies lacinia faucibus volutpat. Massa fringilla congue porttitor mollis gravida. Commodo fermentum, vehicula praesent magnis potenti nisi. Tincidunt mauris euismod vulputate rutrum vitae rutrum massa. Primis vitae taciti sagittis penatibus phasellus convallis, sociis quis gravida facilisi curae; vestibulum. Eleifend in, class tincidunt tempus. Torquent ornare netus, ridiculus inceptos diam? Ligula nunc risus morbi sapien? Blandit sociis ut nostra? Viverra augue fames dictumst aliquam torquent nisi ad montes porta magnis posuere. Orci etiam amet congue placerat ornare pellentesque sapien consectetur tempus eu potenti. Proin pretium adipiscing velit interdum non, eros volutpat mauris pharetra.
-                </p>
-                <p>
-                Malesuada placerat felis mus dictum facilisi cubilia lobortis posuere velit dui luctus purus. Hac nostra fermentum sapien praesent aliquam? Proin at magna taciti pellentesque integer condimentum class arcu vivamus hac. Ultrices nibh curae; congue convallis adipiscing duis nulla mus curae; malesuada. Ultrices posuere condimentum primis consectetur lacus. Vestibulum potenti augue nisi volutpat facilisi erat taciti quis duis, senectus scelerisque! Odio nam ac facilisis orci tempor vitae fusce suspendisse dapibus lobortis erat tincidunt. Aliquet, conubia luctus quisque cras. Vitae nunc sociosqu pretium eros curabitur integer, id felis dolor iaculis. Conubia luctus turpis purus fusce porta. Donec natoque potenti congue vivamus adipiscing. Himenaeos, sagittis lectus mollis! Nulla posuere himenaeos per dictum varius! Mi, inceptos libero rhoncus est purus? Tortor quam vivamus fusce nam hac vestibulum sociis magna sollicitudin a pellentesque ornare. Posuere nulla mi enim arcu velit. Bibendum fringilla commodo mi. Justo cursus.
-                </p>
-                <p>
-                Taciti sociosqu sem dictumst aenean erat dis pharetra a nullam. Himenaeos ornare mus molestie. Rhoncus massa rutrum tempor. Vel ultricies condimentum et, nunc dapibus nisl. Ullamcorper a malesuada faucibus eget elementum metus lobortis morbi posuere venenatis aliquam? Placerat potenti adipiscing lobortis accumsan, id augue lobortis morbi. Ligula et morbi mi risus magna neque conubia tempus. Tristique quisque etiam venenatis vitae.
-                </p>
-                <p>
-                Natoque ad vivamus, tellus tempus faucibus dapibus ante amet quis. Scelerisque conubia imperdiet senectus sociis dictum justo mollis himenaeos consequat integer gravida. Pulvinar auctor rhoncus, fames potenti. Dolor nisi vulputate fames malesuada. Curae; fermentum ut nibh dui. Primis enim nascetur augue. Sed lorem dapibus pharetra nam sodales tristique integer? Pretium mollis potenti montes duis amet sagittis vivamus accumsan porta. Fames natoque habitant ridiculus arcu. Mi ad suscipit conubia sociosqu.
-                </p>
-                <p>
-                Ipsum proin aenean pulvinar ullamcorper sed vehicula ante molestie placerat non. Elit volutpat, velit cras pretium. Senectus, aptent aliquam mi facilisis ac eros. Cum volutpat nullam fusce elit ligula vivamus magna nibh vehicula malesuada molestie. Faucibus vel ultricies litora sit proin ullamcorper lobortis. Mauris facilisis risus placerat placerat varius velit fusce.
-                </p>
-                <p>
-                Cum hac facilisis metus accumsan imperdiet ridiculus condimentum. Sodales lobortis tempus lobortis amet nascetur nisl mattis sollicitudin massa habitant. Vulputate ornare velit dapibus primis maecenas fames odio rhoncus. Augue erat porta est interdum tempor sed facilisis vulputate interdum dis litora felis. Ridiculus neque dictum mus et integer laoreet, faucibus eros. Augue cubilia vestibulum ut proin tellus ultrices luctus ante tempus eget class. Massa justo mi a quam cras amet pretium ac quis maecenas phasellus. Cursus integer egestas mauris torquent vulputate accumsan duis leo. Condimentum ac orci pharetra primis rutrum ultrices suspendisse pharetra venenatis sociosqu tempus nunc! Platea platea?
-                </p>
-                <p>
-                Mi fames ridiculus eros molestie ac lobortis, aenean nisl. Vel suspendisse ac, venenatis rutrum pellentesque lectus. Diam nunc cum parturient eget fusce, eget condimentum. Torquent sed sed consectetur quis facilisis magna curabitur! In convallis vitae per diam et donec vitae velit. Vestibulum lectus penatibus proin risus vitae nisl sagittis semper semper, suspendisse velit. Lacus viverra, leo habitasse nibh pellentesque dapibus. Augue tincidunt cubilia aenean posuere nulla porta fusce. Quisque volutpat conubia dapibus pellentesque laoreet aenean. Taciti per porttitor hendrerit lacinia nunc orci laoreet magnis lobortis vivamus! Dis.
-                </p>
-                <p>
-                    Cubilia gravida a dictum vulputate class nam himenaeos justo! Lectus suscipit per phasellus aenean blandit ante duis est donec sociosqu elit sem! Aptent magnis eros auctor cras a curabitur non sem. Sagittis commodo tellus luctus litora sapien senectus risus mus interdum parturient? Accumsan; velit id quam sagittis maecenas. Nunc dapibus donec dolor hendrerit malesuada aptent quisque porta ante. Augue sagittis curabitur lobortis habitasse neque eu at et bibendum in dui. Mollis netus himenaeos sociis sed. Vivamus nisl ridiculus est varius proin. Aliquet est arcu pulvinar a nibh adipiscing quis gravida congue. Fames quis sociis mattis pretium leo malesuada faucibus. Lobortis habitant curabitur ornare gravida felis mollis primis facilisi suscipit sociis lacinia! Sit dictum purus.
-                    </p>
-                    <p>
-                    Et class vivamus dolor urna torquent cubilia tempus. Rutrum facilisi ipsum consequat vehicula vitae nibh vehicula, lacus dolor fusce id. Integer rutrum donec quisque facilisi ridiculus donec suscipit tempus est conubia? Etiam mattis pellentesque in faucibus. Non vulputate viverra mi ullamcorper risus mollis dignissim diam porttitor a mollis nunc! Semper mi lorem accumsan sociis nam odio ridiculus velit fermentum dis nec. Magnis nibh taciti eros facilisis placerat aliquam pretium turpis felis auctor in accumsan. Ut justo ad sem tristique viverra vestibulum tristique vitae parturient sit lacinia. Torquent ornare quam fusce condimentum suspendisse nec. Porta conubia imperdiet parturient. Dui tristique eu ligula, mattis et posuere vestibulum ornare cubilia sed! Auctor hac sed tellus tempus class fusce eget? Congue purus cubilia auctor vulputate cras facilisi sodales netus nunc.
-                    </p>
-                    <p>
-                    Facilisi lacus platea aliquet ridiculus inceptos eleifend. Natoque velit ultricies porta nec suscipit purus luctus tristique. Sociosqu malesuada porttitor quis, tristique ornare ornare. Nulla hac pellentesque curabitur lacinia adipiscing congue ipsum nunc habitant. Elementum facilisi tristique habitant eu? Ligula orci morbi penatibus id mattis placerat leo. Condimentum magna convallis vehicula tempus potenti nisi taciti et curabitur mollis quis dignissim. Nam purus ullamcorper lectus nunc molestie tincidunt odio volutpat. Interdum risus, est fames. Vulputate proin fames elementum at netus dui.
-                    </p>
-                    <p>
-                    Vehicula dictumst eu sociis dignissim, eget tempor maecenas. Diam ut morbi molestie sollicitudin netus eget cursus ultricies lacinia faucibus volutpat. Massa fringilla congue porttitor mollis gravida. Commodo fermentum, vehicula praesent magnis potenti nisi. Tincidunt mauris euismod vulputate rutrum vitae rutrum massa. Primis vitae taciti sagittis penatibus phasellus convallis, sociis quis gravida facilisi curae; vestibulum. Eleifend in, class tincidunt tempus. Torquent ornare netus, ridiculus inceptos diam? Ligula nunc risus morbi sapien? Blandit sociis ut nostra? Viverra augue fames dictumst aliquam torquent nisi ad montes porta magnis posuere. Orci etiam amet congue placerat ornare pellentesque sapien consectetur tempus eu potenti. Proin pretium adipiscing velit interdum non, eros volutpat mauris pharetra.
-                    </p>
-                    <p>
-                    Malesuada placerat felis mus dictum facilisi cubilia lobortis posuere velit dui luctus purus. Hac nostra fermentum sapien praesent aliquam? Proin at magna taciti pellentesque integer condimentum class arcu vivamus hac. Ultrices nibh curae; congue convallis adipiscing duis nulla mus curae; malesuada. Ultrices posuere condimentum primis consectetur lacus. Vestibulum potenti augue nisi volutpat facilisi erat taciti quis duis, senectus scelerisque! Odio nam ac facilisis orci tempor vitae fusce suspendisse dapibus lobortis erat tincidunt. Aliquet, conubia luctus quisque cras. Vitae nunc sociosqu pretium eros curabitur integer, id felis dolor iaculis. Conubia luctus turpis purus fusce porta. Donec natoque potenti congue vivamus adipiscing. Himenaeos, sagittis lectus mollis! Nulla posuere himenaeos per dictum varius! Mi, inceptos libero rhoncus est purus? Tortor quam vivamus fusce nam hac vestibulum sociis magna sollicitudin a pellentesque ornare. Posuere nulla mi enim arcu velit. Bibendum fringilla commodo mi. Justo cursus.
-                    </p>
-                    <p>
-                    Taciti sociosqu sem dictumst aenean erat dis pharetra a nullam. Himenaeos ornare mus molestie. Rhoncus massa rutrum tempor. Vel ultricies condimentum et, nunc dapibus nisl. Ullamcorper a malesuada faucibus eget elementum metus lobortis morbi posuere venenatis aliquam? Placerat potenti adipiscing lobortis accumsan, id augue lobortis morbi. Ligula et morbi mi risus magna neque conubia tempus. Tristique quisque etiam venenatis vitae.
-                    </p>
-                    <p>
-                    Natoque ad vivamus, tellus tempus faucibus dapibus ante amet quis. Scelerisque conubia imperdiet senectus sociis dictum justo mollis himenaeos consequat integer gravida. Pulvinar auctor rhoncus, fames potenti. Dolor nisi vulputate fames malesuada. Curae; fermentum ut nibh dui. Primis enim nascetur augue. Sed lorem dapibus pharetra nam sodales tristique integer? Pretium mollis potenti montes duis amet sagittis vivamus accumsan porta. Fames natoque habitant ridiculus arcu. Mi ad suscipit conubia sociosqu.
-                    </p>
-                    <p>
-                    Ipsum proin aenean pulvinar ullamcorper sed vehicula ante molestie placerat non. Elit volutpat, velit cras pretium. Senectus, aptent aliquam mi facilisis ac eros. Cum volutpat nullam fusce elit ligula vivamus magna nibh vehicula malesuada molestie. Faucibus vel ultricies litora sit proin ullamcorper lobortis. Mauris facilisis risus placerat placerat varius velit fusce.
-                    </p>
-                    <p>
-                    Cum hac facilisis metus accumsan imperdiet ridiculus condimentum. Sodales lobortis tempus lobortis amet nascetur nisl mattis sollicitudin massa habitant. Vulputate ornare velit dapibus primis maecenas fames odio rhoncus. Augue erat porta est interdum tempor sed facilisis vulputate interdum dis litora felis. Ridiculus neque dictum mus et integer laoreet, faucibus eros. Augue cubilia vestibulum ut proin tellus ultrices luctus ante tempus eget class. Massa justo mi a quam cras amet pretium ac quis maecenas phasellus. Cursus integer egestas mauris torquent vulputate accumsan duis leo. Condimentum ac orci pharetra primis rutrum ultrices suspendisse pharetra venenatis sociosqu tempus nunc! Platea platea?
-                    </p>
-                    <p>
-                    Mi fames ridiculus eros molestie ac lobortis, aenean nisl. Vel suspendisse ac, venenatis rutrum pellentesque lectus. Diam nunc cum parturient eget fusce, eget condimentum. Torquent sed sed consectetur quis facilisis magna curabitur! In convallis vitae per diam et donec vitae velit. Vestibulum lectus penatibus proin risus vitae nisl sagittis semper semper, suspendisse velit. Lacus viverra, leo habitasse nibh pellentesque dapibus. Augue tincidunt cubilia aenean posuere nulla porta fusce. Quisque volutpat conubia dapibus pellentesque laoreet aenean. Taciti per porttitor hendrerit lacinia nunc orci laoreet magnis lobortis vivamus! Dis.
-                    </p>
+            <section class="cse-chap">
+                <header>
+                    <h3>Capitulo 1</h3>
+                    <span class="badge">
+                        <svg class="icon">
+                            <title>Duração</title>
+                            <use xlink:href="../assets/img/icons-regular.svg#clock"></use>
+                        </svg>
+                        12:45
+                    </span>
+                    <span class="badge">
+                        <svg class="icon">
+                            <title>Conteúdo</title>
+                            <use xlink:href="../assets/img/icons-regular.svg#file"></use>
+                        </svg>
+                        5 Conteúdos
+                    </span>
+                </header>
+                <div id="swCap01" class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <article class="cse-content">
+                                <img src="https://picsum.photos/seed/picsum/280/180" class="ctt-cover">
+                                <div class="cse-dtl">
+                                    <h4>Operações a favor e contra a tendência, qual vale mais a pena?</h4>
+                                    <p>
+                                        <small>
+                                            <svg class="icon">
+                                                <title>Like</title>
+                                                <use xlink:href="../assets/img/icons-regular.svg#thumbs-up"></use>
+                                            </svg>
+                                            32 gostaram desse conteúdo
+                                        </small>
+                                    </p>
+                                    <div class="ctt-progress"><div class="bar" style="width: 100%"></div></div>
+                                    <div class="ctt-progress-dtl">
+                                        <div>
+                                            <span>
+                                                <svg class="icon">
+                                                    <title>Video</title>
+                                                    <use xlink:href="../assets/img/icons-solid.svg#play"></use>
+                                                </svg>
+                                                Video
+                                            </span>
+                                            <span>
+                                                <svg class="icon">
+                                                    <title>Duração</title>
+                                                    <use xlink:href="../assets/img/icons-regular.svg#clock"></use>
+                                                </svg>
+                                                2:10
+                                            </span>
+                                        </div>
+                                        <div class="ctt-progress-dtl-prc">
+                                            100% Concluído
+                                        </div>
+                                    </div>
+                                    <div class="ctt-btns">
+                                        <button class="btn btn-secondary btn-md">
+                                            <svg class="icon">
+                                                <title>Duração</title>
+                                                <use xlink:href="../assets/img/icons-solid.svg#arrows-turn-right"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="btn btn-primary">
+                                            <svg class="icon">
+                                                <title>Duração</title>
+                                                <use xlink:href="../assets/img/icons-solid.svg#play"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <button class="btn btn-secondary btn-fav">
+                                        <svg class="icon">
+                                            <title>Favorito</title>
+                                            <use xlink:href="../assets/img/icons-regular.svg#star"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="cse-content">
+                                <img src="https://picsum.photos/seed/picsum/280/180" class="ctt-cover">
+                                <div class="cse-dtl">
+                                    <h4>Operações a favor e contra a tendência, qual vale mais a pena?</h4>
+                                    <p>
+                                        <small>
+                                            <svg class="icon">
+                                                <title>Like</title>
+                                                <use xlink:href="../assets/img/icons-regular.svg#thumbs-up"></use>
+                                            </svg>
+                                            32 gostaram desse conteúdo
+                                        </small>
+                                    </p>
+                                    <div class="ctt-progress"><div class="bar" style="width: 100%"></div></div>
+                                    <div class="ctt-progress-dtl">
+                                        <div>
+                                            <span>
+                                                <svg class="icon">
+                                                    <title>Video</title>
+                                                    <use xlink:href="../assets/img/icons-solid.svg#play"></use>
+                                                </svg>
+                                                Video
+                                            </span>
+                                            <span>
+                                                <svg class="icon">
+                                                    <title>Duração</title>
+                                                    <use xlink:href="../assets/img/icons-regular.svg#clock"></use>
+                                                </svg>
+                                                2:10
+                                            </span>
+                                        </div>
+                                        <div class="ctt-progress-dtl-prc">
+                                            100% Concluído
+                                        </div>
+                                    </div>
+                                    <div class="ctt-btns">
+                                        <button class="btn btn-secondary btn-md">
+                                            <svg class="icon">
+                                                <title>Duração</title>
+                                                <use xlink:href="../assets/img/icons-solid.svg#arrows-turn-right"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="btn btn-primary">
+                                            <svg class="icon">
+                                                <title>Duração</title>
+                                                <use xlink:href="../assets/img/icons-solid.svg#play"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <button class="btn btn-secondary btn-fav">
+                                        <svg class="icon">
+                                            <title>Favorito</title>
+                                            <use xlink:href="../assets/img/icons-regular.svg#star"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="cse-content">
+                                <img src="https://picsum.photos/seed/picsum/280/180" class="ctt-cover">
+                                <div class="cse-dtl">
+                                    <h4>Operações a favor e contra a tendência, qual vale mais a pena?</h4>
+                                    <p>
+                                        <small>
+                                            <svg class="icon">
+                                                <title>Like</title>
+                                                <use xlink:href="../assets/img/icons-regular.svg#thumbs-up"></use>
+                                            </svg>
+                                            32 gostaram desse conteúdo
+                                        </small>
+                                    </p>
+                                    <div class="ctt-progress"><div class="bar" style="width: 100%"></div></div>
+                                    <div class="ctt-progress-dtl">
+                                        <div>
+                                            <span>
+                                                <svg class="icon">
+                                                    <title>Video</title>
+                                                    <use xlink:href="../assets/img/icons-solid.svg#play"></use>
+                                                </svg>
+                                                Video
+                                            </span>
+                                            <span>
+                                                <svg class="icon">
+                                                    <title>Duração</title>
+                                                    <use xlink:href="../assets/img/icons-regular.svg#clock"></use>
+                                                </svg>
+                                                2:10
+                                            </span>
+                                        </div>
+                                        <div class="ctt-progress-dtl-prc">
+                                            100% Concluído
+                                        </div>
+                                    </div>
+                                    <div class="ctt-btns">
+                                        <button class="btn btn-secondary btn-md">
+                                            <svg class="icon">
+                                                <title>Duração</title>
+                                                <use xlink:href="../assets/img/icons-solid.svg#arrows-turn-right"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="btn btn-primary">
+                                            <svg class="icon">
+                                                <title>Duração</title>
+                                                <use xlink:href="../assets/img/icons-solid.svg#play"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <button class="btn btn-secondary btn-fav">
+                                        <svg class="icon">
+                                            <title>Favorito</title>
+                                            <use xlink:href="../assets/img/icons-regular.svg#star"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="cse-content">
+                                <img src="https://picsum.photos/seed/picsum/280/180" class="ctt-cover">
+                                <div class="cse-dtl">
+                                    <h4>Operações a favor e contra a tendência, qual vale mais a pena?</h4>
+                                    <p>
+                                        <small>
+                                            <svg class="icon">
+                                                <title>Like</title>
+                                                <use xlink:href="../assets/img/icons-regular.svg#thumbs-up"></use>
+                                            </svg>
+                                            32 gostaram desse conteúdo
+                                        </small>
+                                    </p>
+                                    <div class="ctt-progress"><div class="bar" style="width: 100%"></div></div>
+                                    <div class="ctt-progress-dtl">
+                                        <div>
+                                            <span>
+                                                <svg class="icon">
+                                                    <title>Video</title>
+                                                    <use xlink:href="../assets/img/icons-solid.svg#play"></use>
+                                                </svg>
+                                                Video
+                                            </span>
+                                            <span>
+                                                <svg class="icon">
+                                                    <title>Duração</title>
+                                                    <use xlink:href="../assets/img/icons-regular.svg#clock"></use>
+                                                </svg>
+                                                2:10
+                                            </span>
+                                        </div>
+                                        <div class="ctt-progress-dtl-prc">
+                                            100% Concluído
+                                        </div>
+                                    </div>
+                                    <div class="ctt-btns">
+                                        <button class="btn btn-secondary btn-md">
+                                            <svg class="icon">
+                                                <title>Duração</title>
+                                                <use xlink:href="../assets/img/icons-solid.svg#arrows-turn-right"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="btn btn-primary">
+                                            <svg class="icon">
+                                                <title>Duração</title>
+                                                <use xlink:href="../assets/img/icons-solid.svg#play"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <button class="btn btn-secondary btn-fav">
+                                        <svg class="icon">
+                                            <title>Favorito</title>
+                                            <use xlink:href="../assets/img/icons-regular.svg#star"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="cse-content">
+                                <img src="https://picsum.photos/seed/picsum/280/180" class="ctt-cover">
+                                <div class="cse-dtl">
+                                    <h4>Operações a favor e contra a tendência, qual vale mais a pena?</h4>
+                                    <p>
+                                        <small>
+                                            <svg class="icon">
+                                                <title>Like</title>
+                                                <use xlink:href="../assets/img/icons-regular.svg#thumbs-up"></use>
+                                            </svg>
+                                            32 gostaram desse conteúdo
+                                        </small>
+                                    </p>
+                                    <div class="ctt-progress"><div class="bar" style="width: 100%"></div></div>
+                                    <div class="ctt-progress-dtl">
+                                        <div>
+                                            <span>
+                                                <svg class="icon">
+                                                    <title>Video</title>
+                                                    <use xlink:href="../assets/img/icons-solid.svg#play"></use>
+                                                </svg>
+                                                Video
+                                            </span>
+                                            <span>
+                                                <svg class="icon">
+                                                    <title>Duração</title>
+                                                    <use xlink:href="../assets/img/icons-regular.svg#clock"></use>
+                                                </svg>
+                                                2:10
+                                            </span>
+                                        </div>
+                                        <div class="ctt-progress-dtl-prc">
+                                            100% Concluído
+                                        </div>
+                                    </div>
+                                    <div class="ctt-btns">
+                                        <button class="btn btn-secondary btn-md">
+                                            <svg class="icon">
+                                                <title>Duração</title>
+                                                <use xlink:href="../assets/img/icons-solid.svg#arrows-turn-right"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="btn btn-primary">
+                                            <svg class="icon">
+                                                <title>Duração</title>
+                                                <use xlink:href="../assets/img/icons-solid.svg#play"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <button class="btn btn-secondary btn-fav">
+                                        <svg class="icon">
+                                            <title>Favorito</title>
+                                            <use xlink:href="../assets/img/icons-regular.svg#star"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="crsl-nav">
+                    <button class="btn btn-secondary cap-01-pv">
+                        <svg class="icon">
+                            <title>Slide Anterior</title>
+                            <use xlink:href="../assets/img/icons-solid.svg#chevron-left"></use>
+                        </svg>
+                    </button>
+                    <button class="btn btn-secondary cap-01-nx">
+                        <svg class="icon">
+                            <title>Próximo Slide</title>
+                            <use xlink:href="../assets/img/icons-solid.svg#chevron-right"></use>
+                        </svg>
+                    </button>
+                </div>
+            </section>
+
+            <!-- CAP 02 -->
+            <section class="cse-chap">
+                <header>
+                    <h3>Capitulo 2</h3>
+                    <span class="badge">
+                        <svg class="icon">
+                            <title>Duração</title>
+                            <use xlink:href="../assets/img/icons-regular.svg#clock"></use>
+                        </svg>
+                        12:45
+                    </span>
+                    <span class="badge">
+                        <svg class="icon">
+                            <title>Conteúdo</title>
+                            <use xlink:href="../assets/img/icons-regular.svg#file"></use>
+                        </svg>
+                        5 Conteúdos
+                    </span>
+                </header>
+                <div id="swCap02" class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <article class="cse-content disabled">
+                                <img src="https://picsum.photos/seed/picsum/280/180" class="ctt-cover">
+                                <div class="cse-dtl">
+                                    <h4>Operações a favor e contra a tendência, qual vale mais a pena?</h4>
+                                    <p>
+                                        <small>
+                                            <svg class="icon">
+                                                <title>Like</title>
+                                                <use xlink:href="../assets/img/icons-regular.svg#thumbs-up"></use>
+                                            </svg>
+                                            32 gostaram desse conteúdo
+                                        </small>
+                                    </p>
+                                    <div class="ctt-progress"><div class="bar" style="width: 0%"></div></div>
+                                    <div class="ctt-progress-dtl">
+                                        <div>
+                                            <span>
+                                                <svg class="icon">
+                                                    <title>Video</title>
+                                                    <use xlink:href="../assets/img/icons-solid.svg#play"></use>
+                                                </svg>
+                                                Video
+                                            </span>
+                                            <span>
+                                                <svg class="icon">
+                                                    <title>Duração</title>
+                                                    <use xlink:href="../assets/img/icons-regular.svg#clock"></use>
+                                                </svg>
+                                                2:10
+                                            </span>
+                                        </div>
+                                        <div class="ctt-progress-dtl-prc">
+                                            100% Concluído
+                                        </div>
+                                    </div>
+                                    <div class="ctt-btns">
+                                        <button class="btn btn-primary btn-md" disabled>
+                                            <svg class="icon">
+                                                <title>Bloqueado</title>
+                                                <use xlink:href="../assets/img/icons-solid.svg#lock"></use>
+                                            </svg>
+                                            Bloqueado
+                                        </button>
+                                    </div>
+                                    <button class="btn btn-secondary btn-fav">
+                                        <svg class="icon">
+                                            <title>Favorito</title>
+                                            <use xlink:href="../assets/img/icons-regular.svg#star"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="cse-content disabled">
+                                <img src="https://picsum.photos/seed/picsum/280/180" class="ctt-cover">
+                                <div class="cse-dtl">
+                                    <h4>Operações a favor e contra a tendência, qual vale mais a pena?</h4>
+                                    <p>
+                                        <small>
+                                            <svg class="icon">
+                                                <title>Like</title>
+                                                <use xlink:href="../assets/img/icons-regular.svg#thumbs-up"></use>
+                                            </svg>
+                                            32 gostaram desse conteúdo
+                                        </small>
+                                    </p>
+                                    <div class="ctt-progress"><div class="bar" style="width: 0%"></div></div>
+                                    <div class="ctt-progress-dtl">
+                                        <div>
+                                            <span>
+                                                <svg class="icon">
+                                                    <title>Video</title>
+                                                    <use xlink:href="../assets/img/icons-solid.svg#play"></use>
+                                                </svg>
+                                                Video
+                                            </span>
+                                            <span>
+                                                <svg class="icon">
+                                                    <title>Duração</title>
+                                                    <use xlink:href="../assets/img/icons-regular.svg#clock"></use>
+                                                </svg>
+                                                2:10
+                                            </span>
+                                        </div>
+                                        <div class="ctt-progress-dtl-prc">
+                                            100% Concluído
+                                        </div>
+                                    </div>
+                                    <div class="ctt-btns">
+                                        <button class="btn btn-primary btn-md" disabled>
+                                            <svg class="icon">
+                                                <title>Bloqueado</title>
+                                                <use xlink:href="../assets/img/icons-solid.svg#lock"></use>
+                                            </svg>
+                                            Bloqueado
+                                        </button>
+                                    </div>
+                                    <button class="btn btn-secondary btn-fav">
+                                        <svg class="icon">
+                                            <title>Favorito</title>
+                                            <use xlink:href="../assets/img/icons-regular.svg#star"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="cse-content disabled">
+                                <img src="https://picsum.photos/seed/picsum/280/180" class="ctt-cover">
+                                <div class="cse-dtl">
+                                    <h4>Operações a favor e contra a tendência, qual vale mais a pena?</h4>
+                                    <p>
+                                        <small>
+                                            <svg class="icon">
+                                                <title>Like</title>
+                                                <use xlink:href="../assets/img/icons-regular.svg#thumbs-up"></use>
+                                            </svg>
+                                            32 gostaram desse conteúdo
+                                        </small>
+                                    </p>
+                                    <div class="ctt-progress"><div class="bar" style="width: 0%"></div></div>
+                                    <div class="ctt-progress-dtl">
+                                        <div>
+                                            <span>
+                                                <svg class="icon">
+                                                    <title>Video</title>
+                                                    <use xlink:href="../assets/img/icons-solid.svg#play"></use>
+                                                </svg>
+                                                Video
+                                            </span>
+                                            <span>
+                                                <svg class="icon">
+                                                    <title>Duração</title>
+                                                    <use xlink:href="../assets/img/icons-regular.svg#clock"></use>
+                                                </svg>
+                                                2:10
+                                            </span>
+                                        </div>
+                                        <div class="ctt-progress-dtl-prc">
+                                            100% Concluído
+                                        </div>
+                                    </div>
+                                    <div class="ctt-btns">
+                                        <button class="btn btn-primary btn-md" disabled>
+                                            <svg class="icon">
+                                                <title>Bloqueado</title>
+                                                <use xlink:href="../assets/img/icons-solid.svg#lock"></use>
+                                            </svg>
+                                            Bloqueado
+                                        </button>
+                                    </div>
+                                    <button class="btn btn-secondary btn-fav">
+                                        <svg class="icon">
+                                            <title>Favorito</title>
+                                            <use xlink:href="../assets/img/icons-regular.svg#star"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="cse-content disabled">
+                                <img src="https://picsum.photos/seed/picsum/280/180" class="ctt-cover">
+                                <div class="cse-dtl">
+                                    <h4>Operações a favor e contra a tendência, qual vale mais a pena?</h4>
+                                    <p>
+                                        <small>
+                                            <svg class="icon">
+                                                <title>Like</title>
+                                                <use xlink:href="../assets/img/icons-regular.svg#thumbs-up"></use>
+                                            </svg>
+                                            32 gostaram desse conteúdo
+                                        </small>
+                                    </p>
+                                    <div class="ctt-progress"><div class="bar" style="width: 0%"></div></div>
+                                    <div class="ctt-progress-dtl">
+                                        <div>
+                                            <span>
+                                                <svg class="icon">
+                                                    <title>Video</title>
+                                                    <use xlink:href="../assets/img/icons-solid.svg#play"></use>
+                                                </svg>
+                                                Video
+                                            </span>
+                                            <span>
+                                                <svg class="icon">
+                                                    <title>Duração</title>
+                                                    <use xlink:href="../assets/img/icons-regular.svg#clock"></use>
+                                                </svg>
+                                                2:10
+                                            </span>
+                                        </div>
+                                        <div class="ctt-progress-dtl-prc">
+                                            100% Concluído
+                                        </div>
+                                    </div>
+                                    <div class="ctt-btns">
+                                        <button class="btn btn-primary btn-md" disabled>
+                                            <svg class="icon">
+                                                <title>Bloqueado</title>
+                                                <use xlink:href="../assets/img/icons-solid.svg#lock"></use>
+                                            </svg>
+                                            Bloqueado
+                                        </button>
+                                    </div>
+                                    <button class="btn btn-secondary btn-fav">
+                                        <svg class="icon">
+                                            <title>Favorito</title>
+                                            <use xlink:href="../assets/img/icons-regular.svg#star"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="cse-content disabled">
+                                <img src="https://picsum.photos/seed/picsum/280/180" class="ctt-cover">
+                                <div class="cse-dtl">
+                                    <h4>Operações a favor e contra a tendência, qual vale mais a pena?</h4>
+                                    <p>
+                                        <small>
+                                            <svg class="icon">
+                                                <title>Like</title>
+                                                <use xlink:href="../assets/img/icons-regular.svg#thumbs-up"></use>
+                                            </svg>
+                                            32 gostaram desse conteúdo
+                                        </small>
+                                    </p>
+                                    <div class="ctt-progress"><div class="bar" style="width: 0%"></div></div>
+                                    <div class="ctt-progress-dtl">
+                                        <div>
+                                            <span>
+                                                <svg class="icon">
+                                                    <title>Video</title>
+                                                    <use xlink:href="../assets/img/icons-solid.svg#play"></use>
+                                                </svg>
+                                                Video
+                                            </span>
+                                            <span>
+                                                <svg class="icon">
+                                                    <title>Duração</title>
+                                                    <use xlink:href="../assets/img/icons-regular.svg#clock"></use>
+                                                </svg>
+                                                2:10
+                                            </span>
+                                        </div>
+                                        <div class="ctt-progress-dtl-prc">
+                                            100% Concluído
+                                        </div>
+                                    </div>
+                                    <div class="ctt-btns">
+                                        <button class="btn btn-primary btn-md" disabled>
+                                            <svg class="icon">
+                                                <title>Bloqueado</title>
+                                                <use xlink:href="../assets/img/icons-solid.svg#lock"></use>
+                                            </svg>
+                                            Bloqueado
+                                        </button>
+                                    </div>
+                                    <button class="btn btn-secondary btn-fav">
+                                        <svg class="icon">
+                                            <title>Favorito</title>
+                                            <use xlink:href="../assets/img/icons-regular.svg#star"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="crsl-nav">
+                    <button class="btn btn-secondary cap-02-pv">
+                        <svg class="icon">
+                            <title>Slide Anterior</title>
+                            <use xlink:href="../assets/img/icons-solid.svg#chevron-left"></use>
+                        </svg>
+                    </button>
+                    <button class="btn btn-secondary cap-02-nx">
+                        <svg class="icon">
+                            <title>Próximo Slide</title>
+                            <use xlink:href="../assets/img/icons-solid.svg#chevron-right"></use>
+                        </svg>
+                    </button>
+                </div>
+            </section>
+        </div>
+        <div class="wrap-explore">
+            <div class="container">
+                <h3 class="display">Exprore na Nomos</h3>
+                <div class="explore-items">
+                    <div>
+                        <article class="explore-items-card">
+                            <div class="tmb">
+                                <img src="https://picsum.photos/seed/picsum/100/100">
+                            </div>
+                            <div>
+                                <h5>Mercados laterais</h5>
+                                <span class="badge">110 conteúdos</span>
+                            </div>
+                        </article>
+                    </div>
+                    <div>
+                        <article class="explore-items-card">
+                            <div class="tmb">
+                                <img src="https://picsum.photos/seed/picsum/100/100">
+                            </div>
+                            <div>
+                                <h5>Mercados laterais</h5>
+                                <span class="badge">110 conteúdos</span>
+                            </div>
+                        </article>
+                    </div>
+                    <div>
+                        <article class="explore-items-card">
+                            <div class="tmb">
+                                <img src="https://picsum.photos/seed/picsum/100/100">
+                            </div>
+                            <div>
+                                <h5>Mercados laterais</h5>
+                                <span class="badge">110 conteúdos</span>
+                            </div>
+                        </article>
+                    </div>
+                    <div>
+                        <article class="explore-items-card">
+                            <div class="tmb">
+                                <img src="https://picsum.photos/seed/picsum/100/100">
+                            </div>
+                            <div>
+                                <h5>Mercados laterais</h5>
+                                <span class="badge">110 conteúdos</span>
+                            </div>
+                        </article>
+                    </div>
+                    <div>
+                        <article class="explore-items-card">
+                            <div class="tmb">
+                                <img src="https://picsum.photos/seed/picsum/100/100">
+                            </div>
+                            <div>
+                                <h5>Mercados laterais</h5>
+                                <span class="badge">110 conteúdos</span>
+                            </div>
+                        </article>
+                    </div>
+                    <div>
+                        <article class="explore-items-card">
+                            <div class="tmb">
+                                <img src="https://picsum.photos/seed/picsum/100/100">
+                            </div>
+                            <div>
+                                <h5>Mercados laterais</h5>
+                                <span class="badge">110 conteúdos</span>
+                            </div>
+                        </article>
+                    </div>
+                    <div>
+                        <article class="explore-items-card">
+                            <div class="tmb">
+                                <img src="https://picsum.photos/seed/picsum/100/100">
+                            </div>
+                            <div>
+                                <h5>Mercados laterais</h5>
+                                <span class="badge">110 conteúdos</span>
+                            </div>
+                        </article>
+                    </div>
+                    <div>
+                        <article class="explore-items-card">
+                            <div class="tmb">
+                                <img src="https://picsum.photos/seed/picsum/100/100">
+                            </div>
+                            <div>
+                                <h5>Mercados laterais</h5>
+                                <span class="badge">110 conteúdos</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
-
+    <footer class="main">
+        <div class="container">
+            <div class="logo-footer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 49">
+                    <path d="M34.992.255v25.416c0 .932-.662 1.747-1.538 1.806-.96.065-1.757-.74-1.757-1.745V7.695c0-4.109-3.137-7.44-7.006-7.44H7.007C3.137.255 0 3.586 0 7.695v40.417h15.122V22.71c0-.966.737-1.75 1.647-1.75s1.647.784 1.647 1.75v17.962c0 4.11 3.137 7.44 7.007 7.44h17.578c3.87 0 7.007-3.33 7.007-7.44V.255H34.992Z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div class="copy">
+                <p>A Nomos Agente Autônomo de Investimentos Ltda. é uma empresa de agentes autônomos de investimento devidamente registrada na Comissão de Valores Mobiliários (CVM), na forma da Resolução CVM 16/2021. A Nomos Agente Autônomo de Investimentos Ltda. atua no mercado financeiro credenciada a XP Investimentos CCTVM S/A, o que pode ser verificado através do site da CVM ou através do site da ANCORD ou através do site da XP. Na forma da legislação da CVM, o agente autônomo de investimento não pode administrar ou gerir o patrimônio de investidores. O agente autônomo é um intermediário e depende da autorização prévia do cliente para realizar operações no mercado financeiro. Esta mensagem, incluindo os seus anexos, contém informações confidenciais destinadas a indivíduo e propósito específicos, sendo protegida por lei. Caso você não seja a pessoa a quem foi dirigida a mensagem, deve apagá-la. É terminantemente proibida a utilização, acesso, cópia ou divulgação não autorizada das informações presentes nesta mensagem. As informações contidas nesta mensagem e em seus anexos são de responsabilidade de seu autor, não representando necessariamente ideias, opiniões, pensamentos ou qualquer forma de posicionamento por parte da Nomos Agente Autônomo de Investimentos Ltda. O investimento em ações é um investimento de risco e rentabilidade passada não é garantia de rentabilidade futura. Na realização de operações com derivativos existe a possibilidade de perdas superiores aos valores investidos, podendo resultar em significativas perdas patrimoniais. Para informações e dúvidas, favor contatar seu Agente Autônomo de Investimentos. Para reclamações, favor contatar a Ouvidoria da XP Investimentos no telefone nº 0800-722-3730.</p>
+            </div>
+            <div class="social">
+                <a href="#" class="btn btn-secondary">
+                    <svg class="icon">
+                        <title>Instagram</title>
+                        <use xlink:href="../assets/img/icons-brands.svg#instagram"></use>
+                    </svg>
+                </a>
+                <a href="#" class="btn btn-secondary">
+                    <svg class="icon">
+                        <title>Youtube</title>
+                        <use xlink:href="../assets/img/icons-brands.svg#youtube"></use>
+                    </svg>
+                </a>
+                <a href="#" class="btn btn-secondary">
+                    <svg class="icon">
+                        <title>Facebook</title>
+                        <use xlink:href="../assets/img/icons-brands.svg#facebook"></use>
+                    </svg>
+                </a>
+                <a href="#" class="btn btn-secondary">
+                    <svg class="icon">
+                        <title>Twitter</title>
+                        <use xlink:href="../assets/img/icons-brands.svg#twitter"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 <script src="/assets/js/ui-interactions-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper("#swCap01", {
+      slidesPerView: 2,
+      spaceBetween: 12,
+      navigation: {
+        nextEl: ".cap-01-nx",
+        prevEl: ".cap-01-pv",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 32,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 32,
+        },
+      }
+    });
+    var swiper2 = new Swiper("#swCap02", {
+      slidesPerView: 2,
+      spaceBetween: 12,
+      navigation: {
+        nextEl: ".cap-02-nx",
+        prevEl: ".cap-02-pv",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 32,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 32,
+        },
+      }
+    });
+  </script>
 </body>
 </html>

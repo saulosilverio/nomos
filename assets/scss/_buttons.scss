@@ -18,6 +18,7 @@
         }
         &:disabled {
             background-color: lighten(desaturate(adjust-hue($accent, -6), 56.02), 23.92);
+            color: darken(desaturate(adjust-hue($tertiary, 5), 1.66), 35.10);
         }
         &:active {
             color: $light;

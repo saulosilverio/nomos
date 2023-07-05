@@ -1,0 +1,48 @@
+footer {
+    &.main {
+        border-top: 1px solid $dark-border-color;
+        padding: 3.2rem;
+        margin-top: 10rem;
+
+        > div {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: start;
+            gap: 4rem;
+
+            @include media-breakpoint-down(sm) {
+                > div {
+                    width: 100%;
+                }
+            }
+        }
+        .logo-footer {
+            display: flex;
+            justify-content: center;
+
+            svg {
+                color: $accent;
+                width: 5rem;
+                height: auto;
+            }
+        }
+        .copy {
+            flex-basis: 0;
+            flex-grow: 1;
+            min-width: 300px;
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.35;
+            color: rgba($light, .6);
+            margin: 0;
+        }
+        .social {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: start;
+            justify-content: center;
+            gap: .8rem;
+        }
+    }
+}

@@ -11,7 +11,7 @@
     padding: 1.5rem;
     width: 100%;
     position: relative;
-    z-index: 1;
+    z-index: $zindex-sticky;
 
     @include media-breakpoint-up(lg) {
         position: sticky;
@@ -70,4 +70,118 @@
         gap: .8rem;
         flex-wrap: wrap;
     }
+}
+
+// Chapter
+.cse-chap {
+    margin: 4.0rem;
+
+    header {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 3.2rem;
+        gap: 2.4rem;
+
+        h3 {
+            font-size: 2.4rem;
+            font-family: $font-family-secondary;
+            margin: 0;
+        }
+    }
+}
+
+.cse-content {
+    background-color: $dark-bg;
+    border: 1px solid $dark-border-color;
+    border-radius: $border-radius;
+    overflow: hidden;
+    position: relative;
+    width: fit-content;
+
+    .ctt-cover {
+        object-fit: cover;
+        aspect-ratio: 14 / 9;
+        width: 100%;
+    }
+    &.disabled {
+        .ctt-cover {
+            opacity: .3;
+            filter: grayscale(1);
+        }
+        button {
+            pointer-events: none;
+        }
+    }
+    .cse-dtl {
+        padding: 2.4rem 1.6rem;
+    }
+    h4 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin: 0 0 1.6rem 0;
+    }
+    small {
+        display: flex;
+        gap: .8rem;
+    }
+    .ctt-progress {
+        border: 1px solid $dark-border-color;
+        height: .5rem;
+        border-radius: $border-radius;
+        width: 100%;
+        overflow: hidden;
+        margin: 1.6rem 0;
+
+        .bar {
+            content: "";
+            display: block;
+            background-color: $accent;
+            height: 5px;
+        }
+    }
+    .ctt-progress-dtl {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-size: 1.2rem;
+        gap: 1.6rem;
+        margin: 1.6rem 0;
+
+        > div {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+
+            span {
+                display: flex;
+                align-items: center;
+                gap: .6rem;
+            }
+        }
+
+        .ctt-progress-dtl-prc {
+            color: $accent;
+            text-transform: uppercase;
+        }
+    }
+    .ctt-btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .8rem;
+    }
+    .btn-fav {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        z-index: 1;
+    }
+}
+.crsl-nav {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: .8rem;
+    margin-top: 2.4rem;
 }
