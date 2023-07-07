@@ -95,9 +95,10 @@
     background-color: $dark-bg;
     border: 1px solid $dark-border-color;
     border-radius: $border-radius;
+    height: 100%;
     overflow: hidden;
     position: relative;
-    width: fit-content;
+    width: 100%;
 
     .ctt-cover {
         object-fit: cover;
@@ -116,9 +117,21 @@
     .cse-dtl {
         padding: 2.4rem 1.6rem;
     }
+    .cse-tutor {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: .8rem;
+        margin-bottom: 1.6rem;
+    }
     h4 {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical; 
         font-size: 1.8rem;
         font-weight: 600;
+        height: 63px;
+        overflow: hidden;
         margin: 0 0 1.6rem 0;
     }
     small {
@@ -170,6 +183,17 @@
         justify-content: center;
         align-items: center;
         gap: .8rem;
+    }
+    .media-actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        > div {
+            display: flex;
+            align-items: center;
+            gap: .8rem;
+        }
     }
     .btn-fav {
         position: absolute;

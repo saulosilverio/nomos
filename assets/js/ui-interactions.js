@@ -15,15 +15,11 @@ function dropDown(divID) {
 }
 
 // Donut Chart
-const courseProgress = document.getElementById("courseProgress")
-const donutPercentage = courseProgress.getAttribute("data-course-progress")
-const donutSegment = document.getElementById("donutSegment")
-
 function donutChart() {
+    const courseProgress = document.getElementById("courseProgress")
+    const donutPercentage = courseProgress.getAttribute("data-course-progress")
+    const donutSegment = document.getElementById("donutSegment")
+    
     donutSegment.setAttribute("stroke-dasharray", `${donutPercentage} ${100 - donutPercentage}`)
     courseProgress.innerText = `${donutPercentage}%`
 }
-
-document.addEventListener("DOMContentLoaded", function(e) {
-    donutChart();
-})

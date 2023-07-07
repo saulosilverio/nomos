@@ -25,6 +25,22 @@
             background-color: darken(desaturate(adjust-hue($accent, -3), 6.60), 26.08);
         }
     }
+    &.btn-dark {
+        background-color: $primary;
+        color: $accent;
+
+        &:hover {
+            background-color: lighten(saturate($primary, 5.13), 20.59);
+        }
+        &:disabled {
+            background-color: rgba($primary, .8);
+            color: darken(desaturate(adjust-hue($accent, 5), 1.66), 35.10);
+        }
+        &:active {
+            color: $accent;
+            background-color: darken(desaturate(adjust-hue($primary, -3), 6.60), 26.08);
+        }
+    }
     &.btn-secondary {
         border-radius: 48px;
         background-color: rgba($accent, .10);

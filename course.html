@@ -1070,7 +1070,7 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script>
     var swiper = new Swiper("#swCap01", {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 12,
       navigation: {
         nextEl: ".cap-01-nx",
@@ -1078,17 +1078,21 @@
       },
       breakpoints: {
         768: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 32,
         },
         1024: {
+          slidesPerView: 3,
+          spaceBetween: 32,
+        },
+        1366: {
           slidesPerView: 4,
           spaceBetween: 32,
         },
       }
     });
     var swiper2 = new Swiper("#swCap02", {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 12,
       navigation: {
         nextEl: ".cap-02-nx",
@@ -1096,14 +1100,23 @@
       },
       breakpoints: {
         768: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 32,
         },
         1024: {
+          slidesPerView: 3,
+          spaceBetween: 32,
+        },
+        1366: {
           slidesPerView: 4,
           spaceBetween: 32,
         },
       }
+    });
+
+    // Donut chart
+    document.addEventListener("DOMContentLoaded", function(e) {
+        donutChart();
     });
   </script>
 </body>
